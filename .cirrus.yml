@@ -1,4 +1,5 @@
 task:
+  timeout_in: 115m
   pip_cache:
     folder: ~/.cache/pip
     fingerprint_script: echo $CIRRUS_OS
@@ -8,9 +9,9 @@ task:
       install_script:
         - export RUNLEVEL=0
         - apt-get update
-        - apt-get install -y apt-utils lsb-release curl 
-        - apt-get update
-        - apt-get install -y dialog python3 python3-pip git wget unzip ftp
+#        - apt-get install -y apt-utils lsb-release curl 
+#        - apt-get update
+        - apt-get install -y curl python3 python3-pip git wget unzip ftp
 
 
 #  version_script:
