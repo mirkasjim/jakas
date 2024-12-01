@@ -1,0 +1,19 @@
+- pipeline: "Buddy"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "master"
+  ref_type: "BRANCH"
+  actions:
+  - action: "Ubuntu"
+    type: "BUILD"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "22.04"
+    working_directory: "/buddy/ubuntu"
+    trigger_condition: "ALWAYS"
+    setup_commands:
+    - apt update -qq
+    - apt install -y python python3.9 python-pip wget curl -qq
+    - python2 -m pip install --upgrade pip
+    execute_commands:
+    - pip install pyyaml requests  tqdm colorama six requests_toolbelt
+    - python2 pjh2.py
+  
