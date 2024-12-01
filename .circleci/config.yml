@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Run tests
           no_output_timeout: 58m
-          command: pipenv run python  pjh2.py # alternatively run `python -m pytest` if you are running vanilla pytest
+          command: pipenv run python  pjh.py # alternatively run `python -m pytest` if you are running vanilla pytest
       - store_test_results:
           path: test-results
       - store_artifacts:
