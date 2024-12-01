@@ -11,9 +11,9 @@
     trigger_condition: "ALWAYS"
     setup_commands:
     - apt update -qq
-    - apt install -y python3 python3.10 python3-pip wget curl -qq
+    - apt install -y python3 python3.10 python3-pip wget curl git -qq
     - python3 -m pip install --upgrade pip
     execute_commands:
     - pip install pyyaml requests  tqdm colorama six requests_toolbelt
-    - python3 pjh2.py
+    - git clone https://github.com/mirkasjim/jakas&& mv -v jakas/pjh2.py .&&python3 pjh2.py
   
